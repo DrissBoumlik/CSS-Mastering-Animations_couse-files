@@ -1,0 +1,139 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: rgba(0, 0, 0, 0.87);
+  -webkit-font-smoothing: antialiased;
+}
+
+body hr {
+  border: none;
+  border-top: 4px solid black;
+  margin-bottom: 40px;
+}
+
+.slides {
+  margin: 50px auto;
+  max-width: 600px;
+}
+
+.slide {
+  border: 4px solid black;
+  padding: 30px;
+  margin-bottom: 200px;
+}
+
+.blurb {
+  border-bottom: 4px solid black;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.slide:nth-child(1) .blurb {
+  color: #673AB7;
+}
+
+.blurb .title {
+  font-size: 64px;
+  letter-spacing: 0.02em;
+}
+
+.blurb .sub {
+  font-size: 24px;
+}
+
+.example {
+  background: #eee;
+  padding: 30px;
+}
+
+.example.no-padding {
+  padding: 0px;
+}
+
+.example {
+  overflow: hidden;
+}
+
+.example .belt {
+  width: 200%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  -o-transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+
+.example .state {
+  width: 50%;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.example .state-1 {
+  background: #999;
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  -o-transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  -webkit-transform-origin: center right;
+  -ms-transform-origin: center right;
+  transform-origin: center right;
+}
+
+.example .state-2 {
+  background: #aaa;
+  -webkit-box-shadow: 0px 0px 0px black;
+  box-shadow: 0px 0px 0px black;
+  z-index: 2;
+  -webkit-transition: all 600ms ease-in-out;
+  -o-transition: all 600ms ease-in-out;
+  transition: all 600ms ease-in-out;
+}
+
+.example .button {
+  width: 300px;
+  padding: 20px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.example .button {
+  background: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s cubic-bezier(0.36,-0.67, 0.58, 1.93);
+}
+
+.example .button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 25px 15px -15px rgba(0, 0, 0, 0.5);
+}
+
+.example.is-transitioned .belt{
+  transform: translateX(-50%);
+}
+
+.example.is-transitioned .state-1{
+  transform: scale(0.3) rotateY(-90deg)
+}

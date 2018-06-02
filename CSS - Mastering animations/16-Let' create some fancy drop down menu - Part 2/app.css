@@ -1,0 +1,82 @@
+nav {
+  padding: 50px;
+  text-align: center;
+}
+
+nav > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  background: #ddd;
+  border-radius: 5px;
+}
+
+nav > ul > li {
+  float: left;
+  width: 150px;
+  height: 65px;
+  line-height: 65px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+nav > ul > li:hover {
+  background: #d5d5d5;
+  border-radius: 5px;
+}
+
+ul.drop-menu {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  padding: 0;
+}
+
+ul.drop-menu li {
+  background: #666;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+ul.drop-menu li:hover {
+  background: #606060;
+}
+
+ul.drop-menu li:last-child {
+  border-radius: 0px 0px 5px 5px;
+}
+
+ul.drop-menu li {
+  display: none;
+}
+li:hover > ul.drop-menu li {
+  display: block;
+  opacity: 0;
+  transform-origin: top right;
+  animation: menu 10s ease-in-out forwards;
+}
+
+ul.drop-menu{
+  perspective: 1000px;
+}
+
+li:hover > ul.drop-menu li:nth-child(1) { animation-duration: 0.3s }
+li:hover > ul.drop-menu li:nth-child(2) { animation-duration: 0.5s }
+li:hover > ul.drop-menu li:nth-child(3) { animation-duration: 0.7s }
+li:hover > ul.drop-menu li:nth-child(4) { animation-duration: 0.9s }
+
+@keyframes menu{
+  0%{
+    opacity: 0;
+    transform: rotate(-50deg)
+  }
+  100%{
+    opacity: 1;
+    transform: rotate(0deg)
+  }
+}

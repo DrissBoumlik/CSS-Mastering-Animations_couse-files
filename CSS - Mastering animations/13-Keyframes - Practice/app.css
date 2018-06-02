@@ -1,0 +1,23 @@
+
+.box{
+    height: 200px;
+    width: 200px;
+    background: #333;
+    animation: expand 3s infinite;
+}
+
+
+@keyframes expand{
+    0%{
+        width: 600px;
+        /* height: 100px; */
+    }
+    50%{
+        width: 10px;
+        /* height: 10px; */
+    }
+    100%{
+        width: 400px;
+        /* height: 400px; */
+    }
+}

@@ -1,0 +1,42 @@
+
+
+label{
+    position: relative;
+    left: 100px;
+    top: 100px;
+}
+
+.check{
+    display: none;
+}
+
+.btn{
+    display: inline-block;
+    height: 50px;
+    width: 120px;
+    background: #333;
+    border-radius: 50px;
+    transition: background 0.5s ease;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background: #aaa;
+    top: -45px;
+    left: -5px;
+    border-radius: 40px;
+    transition: all 0.5s ease;
+}
+
+
+.check:checked + .btn{
+    background: #b1b1b1;
+}
+
+.check:checked + .btn::before{
+    background: #0283fc;
+    left: 55px;
+}

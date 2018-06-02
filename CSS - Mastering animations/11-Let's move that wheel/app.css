@@ -1,0 +1,26 @@
+
+.wrapper{
+    background: #ddd;
+    padding: 20px;
+}
+
+.wrapper:hover .container{
+    transform: translateX(1200px) rotate(7200deg)
+}
+
+.container{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border: 10px dashed #0d3766;
+    border-radius: 50%;
+    transition: transform 0.10s ease-out;
+}
+
+.wheel{
+    height: 100%;
+    text-align: center;
+    line-height: 200px;
+    text-transform: uppercase;
+    font-size: 2rem;
+}

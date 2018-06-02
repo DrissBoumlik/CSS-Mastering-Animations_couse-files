@@ -1,0 +1,73 @@
+
+
+.road{
+  position: relative;
+  width: 70%;
+  border-top: 12px dotted black;
+  margin: 150px auto
+}
+
+.pacman{
+  position: absolute;
+  animation: walk 6s linear infinite;
+}
+.pacman:before, .pacman:after{
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  position: absolute;
+  border: solid 30px #0798ca;
+  border-radius: 50%;
+  top: -35px;
+}
+.pacman:before{
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  animation: chompTop 0.02s linear infinite alternate;
+}
+
+.pacman::after{
+  border-right-color: transparent;
+  border-top-color: transparent;
+  animation: chompBottom 0.01s linear infinite alternate;
+}
+
+@keyframes walk{
+  0%{
+    left: 0%;
+    transform: scaleX(1)
+  }
+
+  49%{
+    left: 100%;
+    transform: scaleX(1)
+  }
+
+  50%{
+    transform: scaleX(-1)
+  }
+
+  100%{
+    left: 0%;
+    transform: scaleX(-1)
+  }
+}
+
+@keyframes chompTop{
+  0%{
+    transform: rotate(0deg)
+  }
+  100%{
+    transform: rotate(40deg)
+  }
+}
+
+@keyframes chompBottom{
+  0%{
+    transform: rotate(0deg)
+  }
+  100%{
+    transform: rotate(-40deg)
+  }
+}
