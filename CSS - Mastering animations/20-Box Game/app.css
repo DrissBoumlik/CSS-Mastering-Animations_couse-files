@@ -1,0 +1,44 @@
+body {
+    background-color: #eee;
+}
+
+.wrapper {
+    text-align: center;
+    margin-top: 100px;
+}
+.container {
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    border: 10px solid #000;
+}
+
+.box {
+    background-color: #bbb;
+    height: 100%;
+    transition: transform 0.2s ease;
+    transform-origin: bottom right;
+    font-size: 3rem;
+    line-height: 200px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.play {
+    background-color: #28a745;
+    color: #fff;
+    padding: 5px 20px;
+    border-color: transparent;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.points_box {
+    position: absolute;
+    right: 0;
+    text-transform: capitalize;
+    font-size: 3rem;
+    margin-right: 1rem;
+}
